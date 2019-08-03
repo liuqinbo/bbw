@@ -184,7 +184,6 @@
   font-size: 12px;
   color: white;
   margin-right: 8px;
-  cursor: pointer;
 }
 
 .head .main-nav .wrapper .search div span {
@@ -193,6 +192,7 @@
 
 .head .main-nav .wrapper .search div ul {
   position: absolute;
+  display: none;
   top: 36px;
   left: -235px;
   z-index: 9;
@@ -207,6 +207,7 @@
   line-height: 32px;
   background-color: #f9f9f9;
   color: #666;
+  cursor: pointer;
 }
 
 .head .main-nav .wrapper .search div ul li ul {
@@ -216,6 +217,7 @@
   background: white;
   height: 520px;
   width: 356px;
+  cursor: auto;
 }
 
 .head .main-nav .wrapper .search div ul li ul li {
@@ -234,6 +236,10 @@
 .head .main-nav .wrapper .search div ul li ul li img {
   width: 60px;
   height: 60px;
+}
+
+.head .main-nav .wrapper .search div:hover ul {
+  display: block;
 }
 
 .head .main-nav .wrapper .search input {

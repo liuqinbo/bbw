@@ -191,13 +191,13 @@
                 height: 38px;
                 line-height: 38px;
 
+
                 div {
                     position: relative;
                     display: inline-block;
                     font-size: 12px;
                     color: white;
                     margin-right: 8px;
-                    cursor: pointer;
 
                     span {
                         font-size: 10px;
@@ -205,6 +205,7 @@
 
                     ul {
                         position: absolute;
+                        display: none;
                         top: 36px;
                         left: -235px;
                         z-index: 9;
@@ -218,6 +219,8 @@
                             line-height: 32px;
                             background-color: #f9f9f9;
                             color: #666;
+                            cursor: pointer;
+
 
                             ul {
                                 position: absolute;
@@ -226,6 +229,7 @@
                                 background: white;
                                 height: 520px;
                                 width: 356px;
+                                cursor: auto;
 
                                 li {
                                     text-align: center;
@@ -249,6 +253,10 @@
                         }
                     }
 
+                }
+
+                div:hover ul {
+                    display: block;
                 }
 
                 input {
