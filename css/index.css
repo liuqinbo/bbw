@@ -221,7 +221,6 @@
   background: white;
   height: 520px;
   width: 356px;
-  display: none;
   cursor: auto;
 }
 
@@ -243,12 +242,12 @@
   height: 60px;
 }
 
-.head .main-nav .wrapper .search div ul li .show {
-  display: block;
-}
-
 .head .main-nav .wrapper .search div ul li .hidden {
   display: none;
+}
+
+.head .main-nav .wrapper .search div ul li .show {
+  display: block;
 }
 
 .head .main-nav .wrapper .search div:hover ul {
@@ -285,6 +284,12 @@
   font-size: 12px;
   text-align: center;
   color: #999999;
+  box-sizing: border-box;
+}
+
+.sub-nav a:hover {
+  border-bottom: 2px solid #FF697F;
+  color: #FF697F;
 }
 
 .banner {
@@ -415,7 +420,7 @@
 
 .content .sp-content .list-content {
   float: right;
-  width: 248px;
+  width: 244px;
   border: 1px solid #dbdbdb;
 }
 
@@ -435,11 +440,14 @@
 
 .content .sp-content .list-content ul {
   background: white;
+  display: none;
 }
 
 .content .sp-content .list-content ul li {
   color: #3e3e3e;
   padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .content .sp-content .list-content ul li img {
@@ -463,6 +471,10 @@
 
 .content .sp-content .list-content ul li del {
   font-size: 12px;
+}
+
+.content .sp-content .list-content .show {
+  display: block;
 }
 
 .content .sp-content .p {

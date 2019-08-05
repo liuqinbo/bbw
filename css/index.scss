@@ -233,7 +233,6 @@
                                 background: white;
                                 height: 520px;
                                 width: 356px;
-                                display: none;
                                 cursor: auto;
 
                                 li {
@@ -255,12 +254,13 @@
                                 }
                             }
 
-                            .show {
-                                display: block;
-                            }
 
                             .hidden {
                                 display: none;
+                            }
+
+                            .show {
+                                display: block;
                             }
 
                         }
@@ -309,6 +309,12 @@
         font-size: 12px;
         text-align: center;
         color: #999999;
+        box-sizing: border-box;
+    }
+
+    a:hover {
+        border-bottom: 2px solid #FF697F;
+        color: #FF697F;
     }
 }
 
@@ -448,9 +454,10 @@
 
         }
 
+
         .list-content {
             float: right;
-            width: 248px;
+            width: 244px;
             border: 1px solid #dbdbdb;
 
             .active {
@@ -462,8 +469,8 @@
                 font-size: 14px;
                 color: #787878;
                 background: #f1f1f1;
-                // border-bottom: 1px solid #dbdbdb;       
-                // border-right: 1px solid #dbdbdb;  
+                // border-bottom: 1px solid #dbdbdb;
+                // border-right: 1px solid #dbdbdb;
                 line-height: 30px;
                 width: 61px;
                 text-align: center;
@@ -474,10 +481,13 @@
 
             ul {
                 background: white;
+                display: none;
 
                 li {
                     color: #3e3e3e;
                     padding: 10px;
+                    cursor: pointer;
+                    border-bottom: 1px solid #eeeeee;
 
                     img {
                         float: left;
@@ -502,6 +512,12 @@
                         font-size: 12px;
                     }
                 }
+
+
+            }
+
+            .show {
+                display: block;
             }
         }
 
