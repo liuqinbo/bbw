@@ -198,8 +198,12 @@
   z-index: 9;
 }
 
+.head .main-nav .wrapper .search div ul .active {
+  background: white;
+  color: #f34660;
+}
+
 .head .main-nav .wrapper .search div ul li {
-  position: relative;
   width: 110px;
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
@@ -217,6 +221,7 @@
   background: white;
   height: 520px;
   width: 356px;
+  display: none;
   cursor: auto;
 }
 
@@ -236,6 +241,14 @@
 .head .main-nav .wrapper .search div ul li ul li img {
   width: 60px;
   height: 60px;
+}
+
+.head .main-nav .wrapper .search div ul li .show {
+  display: block;
+}
+
+.head .main-nav .wrapper .search div ul li .hidden {
+  display: none;
 }
 
 .head .main-nav .wrapper .search div:hover ul {
