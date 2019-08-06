@@ -9,6 +9,8 @@ class Home {
         this.left_content();
         this.right_content();
         this.scroll_top();
+        this.sing_in();
+        this.jump_detail();
     }
     list() {
         let res = this.ajax("A");  //网络请求
@@ -185,10 +187,36 @@ class Home {
             document.body.scrollTop = 0;
         });
     }
+    sing_in() {
+        let name = obj.getcookies("username");
+        if (name) {
+            $("#sing_in").html(`用户${name}`).parent().append($(`<a id="sing_out" style="margin:0 5px;float:left"></a>`).html("退出登录"));
+            $("#sing_out").click(() => {
+                obj.clearcookies();
+                $("#sing_out").remove();
+                $("#sing_in").html(`登录`);
+                $("#sing_in").click(() => {
+                    window.location.href = "../html/sing_in.html";
+                })
+            })
+        } else {
+            $("#sing_in").html(`登录`);
+            $("#sing_in").click(() => {
+                window.location.href = "../html/sing_in.html";
+            })
+        }
 
+    }
+
+    jump_detail() {
+        $("#left-content,#right-content").click(() => {
+            if (!$("#sing_out")[0]) {
+                window.location.href = "../html/sing_in.html";
+            }
+        })
+
+    }
 
 }
 
 let home = new Home();
-
-

@@ -8,7 +8,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/iar.css">
-
 </head>
 
 <body>
@@ -23,21 +22,18 @@
             </div>
         </div>
     </div>
-
     <main>
         <img src="../images/dpd3xfg3.bmp" alt="">
         <div>
             <div>
                 <p class="clearfix">
-                    <span class="span1">新用户注册</span>
-                    <span class="span2">已有账号？<a href="sing_in.html">直接登录</a></span>
+                    <span class="span1">登录贝贝</span>
+                    <span class="span2">还没账号？<a href="register.html">立即注册</a></span>
                 </p>
                 <input type="text" id="phone" placeholder=" 您的手机号">
-                <input type="text" placeholder=" 短信校验证" style="width: 170px">
-                <button class="button1">获取校验码</button>
-                <input type="password" id="pwd" placeholder=" 密码 6-16位字母、数字或字符" style="width: 227px;margin-right: 0;">
-                <button class="button1" style="height:25px;line-height: 23px;" id="change">显/隐</button>
-                <button class="button2">注册</button>
+                <input type="password" id="phone" placeholder=" 密码">
+                <input type="checkbox" checked class="checkbox"><label>自动登录</label>
+                <button class="button2">登录</button>
 
             </div>
         </div>
@@ -68,9 +64,9 @@
         </div>
     </footer>
     <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/cookies.js"></script>
     <script src="../js/md5.js"></script>
-    <script src="../js/register.js"></script>
-
+    <script src="../js/sing_in.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 <?php
 $DB=mysqli_connect("127.0.0.1","root","","bbw");
-mysqli_query($DB,"set character set 'utf8'");//读库
+mysqli_query($DB,"set character set 'utf8'");//读库文字标准化
 
 
 
