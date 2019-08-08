@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../css/head-footer.min.css">
+</head>
+
+<body>
+    <include src="head.html"></include>
+
+    <div class="list-content">
+        <p class="p">
+            <span>首页 > 分类浏览</span>
+            ><span id="list-type"></span>
+        </p>
+        <div class="div1">
+            <span class="active" style="margin-left:40px" id="NORMAl">正常</span>
+            <span id="H_L">价格H-L</span>
+            <span id="L_H">价格L-H</span>
+        </div>
+        <div class="div2 clearfix" id="list-content">
+            <!-- <a>
+                <img src="../images/49278819960000_800x800.jpg!250x250.jpg" alt="">
+                <p class="p1">迪士尼新品小学生书包 护脊减负</p>
+                <p class="p2">
+                    <span class="span1">￥99</span>
+                    <del>￥123</del>
+                    <span class="span2">8.1折</span>
+                </p>
+
+            </a> -->
+            <!-- 第四个margin为0;第5个要clear:both; -->
+        </div>
+        <div class="div3">
+            <span id="prec">上一页</span>
+            <span id="next">下一页<span>
+        </div>
+    </div>
+    <include src="footer.html"></include>
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="../js/cookies.js"></script>
+    <script src="../js/list.js"></script>
+</body>
+
+</html>
