@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/head-footer.min.css">
     <link rel="stylesheet" href="../font/iconfont.css">
-
+    <link rel="stylesheet" href="../css/shoppingcar.css">
 </head>
 
 <body>
@@ -45,12 +45,11 @@
             </ul>
         </div>
     </div>
-    <!-- //head -->
     <div class="head">
         <div class="wrapper">
             <div class="main-logo">
                 <a href="../html/index.html"><img id="logo" src="../images/logo.jpg" alt="贝贝" title="返回首页"></a>
-                <div style="float:right"><a><img src="../images/upload_390x40.png"></a><a href="shoppingcar.html">
+                <div style="float:right"><a><img src="../images/upload_390x40.png"></a><a href="">
                         <button>我的购物车
                             <span class="iconfont icon-xiangxia"></span>
                             <p><span class="iconfont icon-gouwuchekong"></span></p>
@@ -59,72 +58,57 @@
                 </div>
             </div>
         </div>
-        <div class="main-nav">
-            <div class="wrapper clearfix ">
-                <div class="main-nav_1 clearfix active">
-                    <a href="index.html" style="background: #f34660">首页</a>
-                    <a>贝贝APP</a>
-                    <a>贝店</a>
-                    <a>贝仓</a>
-                    <a>贝贷</a>
-                    <a>商家入驻</a>
-                </div>
-                <div class="search">
-                    <div>在售分类
-                        <!--在此处加个商品选项卡 -->
-                        <span class="iconfont icon-xiangxia1"></span>
-                        <ul id="search-ul">
-                            <!-- <li>
-                                热销分类
-                                <ul>
-                                    <li>
-                                        <img src="../images/qzone_45x45.png" alt="">
-                                        <p>文字</p>
-                                    </li>
-    
-    
-                                </ul>
-                            </li> -->
+    </div>
+    <div class="car-main">
+        <div class="s-car">我的购物车</div>
+        <ul class="clearfix">
+            <li class="li1">商品信息</li>
+            <li>单价</li>
+            <li>数量</li>
+            <li>金额</li>
+            <li>操作</li>
+        </ul>
+        <table id="table">
+            <!-- <tr>
+                <td style="width:60px">
+                    <input type="checkbox" checked id="checkbox">
+                </td>
+                <td id="content">
+                    <img src="">
+                    是的发送到发送到
+                </td>
+                <td id="price">123456</td>
+                <td id="num">
+                    <button>+</button>
+                    <input type="text" class="num">
+                    <button>-</button>
+                </td>
+                <td id="subtotal">
+                    123456
+                </td>
+                <td id="delete">
+                    <button class="btn2">删除</button>
+                </td>
+            </tr> -->
 
-                        </ul>
-                    </div>
-                    <input type="search" placeholder="搜索商品或品牌">
-                </div>
-            </div>
+        </table>
+        <div class="div2 clearfix">
+            <span class="sp1"><input type="checkbox" class="all" checked>全选</span>
+            <sapn class="sp2"></sapn>
         </div>
+
+
     </div>
-    <!-- content -->
-    <!-- 副nav -->
-    <div class="sub-nav clearfix">
-        <!-- <a href="">童装</a>
-        <a href="">母婴</a>
-        <a href="">居家</a>
-        <a href="">美食</a>
-        <a href="">女装</a>
-        <a href="">鞋包</a>
-        <a href="">美妆</a>
-        <a href="">奶粉</a>
-        <a href="">纸尿裤</a>
-        <a href="" class="special-a">精彩预告</a> -->
-    </div>
-    <!-- 固定功能条 -->
-    <ul class="side-panel">
-        <a href="shoppingcar.html">
-            <li title="购物车"><span class="iconfont icon-gouwuchekong"></span></li>
-        </a>
-        <li class="li2" title="手机APP"><span class="iconfont icon-shouji"></span>
-            <div>
-                <P>下载手机APP<br>随时随地看上新</P><img src="../images/gzh.jpg" alt="">
-            </div>
-        </li>
-        <li title="服务在线"><span class="iconfont icon-kefu-tianchong"></span></li>
-        <!-- <a href="#top" title="回到顶部"> -->
-        <li id="scorll-top"><span class="iconfont icon-xiangshang" title="回到顶部"></span></li>
-        <!-- </a> -->
-    </ul>
+
+    <include src="footer.html"></include>
+
+
+
     <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/include.js"></script>
     <script src="../js/cookies.js"></script>
-    <script src="../js/head-footer.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/shoppingcar.js"></script>
 </body>
 
 </html>

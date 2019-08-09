@@ -2,6 +2,7 @@ $("document").ready(() => {
     class Home {
         constructor() {
             this.i1 = 0;
+            this.data = 0;
             this.init();
         }
         init() {
@@ -13,6 +14,8 @@ $("document").ready(() => {
             this.sing_in();
             this.jump_detail();
             this.jump_listpage();
+            this.add_database();
+
         }
         list() {
             let res = this.ajax("A");  //网络请求
@@ -67,7 +70,7 @@ $("document").ready(() => {
                         return `<li style="border-bottom:1px solid #e6e6e6;border-right: 1px solid #e6e6e6 ">
                         <a href="">
                             <img src="${ele.src}">
-                                <p class="p1">${ele.price1}</p>
+                                <p class="p1">￥${ele.price1}</p>
                                 <p>${ele.content}</p>
                         </a>
                     </li>`
@@ -87,27 +90,15 @@ $("document").ready(() => {
                 if (res.responseJSON) {
                     clearInterval(timer);
                     let e1 = res.responseJSON.map((ele, index) => {
-                        if ((index + 2) % 3 == 0) {
-                            return ` <a style="margin:0 21px ">
-                    <img src="${ele.src}" alt="">
-                        <p class="p1">${ele.content}</p>
-                        <p class="p2">
-                            <span class="span1">${ele.price1}</span>
-                            <del>${ele.price2}</del>
-                            <span class="span2">${ele.discount}</span>
-                        </p>
-                      </a>`}
-                        else {
-                            return ` <a>
-                          <img src="${ele.src}" alt="">
-                              <p class="p1">${ele.content}</p>
-                              <p class="p2">
-                                  <span class="span1">${ele.price1}</span>
-                                  <del>${ele.price2}</del>
-                                  <span class="span2">${ele.discount}</span>
-                              </p>
-                            </a>`
-                        }
+                        return ` <a class="test1" id="${this.data++}" ${(index + 2) % 3 == 0 ? 'style="margin:0 21px "' : ''}>
+                                    <img src="${ele.src}" alt="">
+                                    <p class="p1">${ele.content}</p>
+                                    <p class="p2">
+                                        <span class="span1">￥${ele.price1}</span>
+                                        <del>${ele.price2}</del>
+                                        <span class="span2">${ele.discount}</span>
+                                    </p>
+                                </a>`
                     }).join("");
                     if (res.responseJSON) {
                         let a = $("<div></div>").html(e1)
@@ -141,7 +132,7 @@ $("document").ready(() => {
                                 return `<li class="clearfix">
                                         <img src="${ele1.src}">
                                         <p>${ele1.content}</p>
-                                        <span>${ele1.price1}</span>
+                                        <span>￥${ele1.price1}</span>
                                         <del>${ele1.price2}</del>
                                     </li>`
                             }
@@ -214,9 +205,10 @@ $("document").ready(() => {
             $("#left-content,#right-content").click(() => {
                 if (!$("#sing_out")[0]) {
                     window.location.href = "../html/sing_in.html";
+                    return;
                 }
-            })
 
+            })
         }
         jump_listpage() {
             let arr = ["童装", "母婴", "居家", "美食", "女装",
@@ -228,6 +220,31 @@ $("document").ready(() => {
             $(".sub-nav").on("click", "a", (e) => {
                 window.location.href = `../html/list.html#${e.target.text}`;
             })
+        }
+        add_database() {
+            setTimeout(() => {
+                let id;
+                $(".test1").map((index, ele) => {
+                    $(ele).click(() => {
+                        id = $(ele).attr("id");
+                        console.log(id);
+                        $.ajax({
+                            type: "post",
+                            url: "../php/database.php",
+                            data: { type: 'set', id: id },
+                            dataType: 'json',
+                            success: function (response) {
+                                console.log(response["totalRow"]);
+                            },
+                            error: function (data) {
+                                console.log(data)
+                            }
+                        });
+                    })
+
+                })
+            }, 2000)
+
         }
     }
 
