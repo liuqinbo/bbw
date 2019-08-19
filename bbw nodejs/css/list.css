@@ -1,0 +1,106 @@
+.list-content {
+    background: #f9f9f9;
+    overflow: hidden;
+}
+
+.list-content .p {
+    width: 1080px;
+    margin: 20px auto 10px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.list-content .div1 {
+    width: 1080px;
+    margin: 20px auto;
+    height: 48px;
+    line-height: 42px;
+    border: 1px solid #dddddd;
+    background: white;
+}
+
+.list-content .div1 span {
+    background: white;
+    border: 1px solid #dddddd;
+    font-size: 13px;
+    height: 20px;
+    color: #a1a1a9;
+    margin-right: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.list-content .div1 .active {
+    font-size: 13px;
+    background: #ff4965;
+    color: white;
+    border-color: #ff4965;
+}
+
+.list-content .div1 span:hover {
+    border-color: #ff4965;
+}
+
+.list-content .div2 {
+    width: 1080px;
+    margin: auto;
+}
+
+.list-content .div2 nbor {
+    margin: 0px;
+}
+
+.list-content .div2 a {
+    margin: 0 20px 20px 0;
+    float: left;
+}
+
+.list-content .div2 a img {
+    width: 253px;
+    height: 253px;
+}
+
+.list-content .div2 a .p1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 227px;
+    font-size: 12px;
+    margin: 12px 14px;
+    color: #666666;
+}
+
+.list-content .div2 a .p2 {
+    margin: 12px;
+    color: #a1a9b3;
+}
+
+.list-content .div2 a .p2 .span1 {
+    font-size: 24px;
+    color: #FF4695;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.list-content .div2 a .p2 .span2 {
+    float: right;
+    line-height: 28px;
+}
+
+.list-content .div3 {
+    clear: both;
+    width: 1080px;
+    margin: 30px auto;
+    text-align: center;
+
+}
+
+.list-content .div3 span {
+    cursor: pointer;
+    margin-left: 35px;
+    color: #666666;
+}
+
+.list-content .div3 span:hover {
+    color: #FF4695;
+}
